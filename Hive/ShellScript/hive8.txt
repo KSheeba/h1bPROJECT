@@ -1,0 +1,1 @@
+Select employername,(kill*100)/kill1 as top10 from (select count(*) as kill1,1 as tojoin from h1b_final)b join (Select count(*) as kill,1 as tojoin,employername from h1b_final where casestatus="CERTIFIED" or casestatus="CERTIFIED WITHDRAWN" group by employername) a on a.tojoin=b.tojoin  order  by  top10 limit 10;

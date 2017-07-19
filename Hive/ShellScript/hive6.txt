@@ -1,0 +1,1 @@
+Select casestatus,year,(sk*100)/a.sheeba from (Select count(*) as sk ,casestatus,year from h1b_final  group by casestatus,year) b,(select count(*) as sheeba from h1b_final) a order by casestatus; 

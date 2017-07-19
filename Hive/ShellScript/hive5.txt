@@ -1,0 +1,1 @@
+select * from(Select rank() over (partition by year order by sk desc) as sheeba,jobtitle,year from (Select count(*) as sk,year,jobtitle from h1b_final group by jobtitle,year ) a)b where b.sheeba<11 and year is not null;
