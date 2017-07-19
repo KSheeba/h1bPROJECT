@@ -1,0 +1,2 @@
+hadoop jar MR1a.jar MR1a /user/hive/warehouse/h1b.db/h1bfinal /user/hduser/hadoop/MR1aoutput;
+ hadoop fs -cat /user/hduser/hadoop/MR1aoutput/p*;
