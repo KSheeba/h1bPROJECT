@@ -1,0 +1,3 @@
+6) Find the percentage and the count of each case status on total applications for each year. Create a graph depicting the pattern of All the cases over the period of time.
+
+Select casestatus,year,(sk*100)/a.sheeba from (Select count(*) as sk ,casestatus,year from h1b_final  group by casestatus,year) b,(select count(*) as sheeba from h1b_final) a order by casestatus; 
